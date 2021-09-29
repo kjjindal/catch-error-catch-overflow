@@ -1,0 +1,11 @@
+.language{
+     background-color: #0D1117;
+     height:max-content;
+}
+
+.language__type{
+    width: 75%;
+    margin: auto;
+    display: flex;
+     flex-wrap: wrap;
+}

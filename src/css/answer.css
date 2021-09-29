@@ -1,0 +1,28 @@
+.answer{
+    background-color: #161B22;
+    height:100vh;
+}
+
+.answer__container{
+   padding: 10px;
+}
+
+.answer__form>textarea{
+    width: 95%;
+    height: 300px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    outline-width: 0;
+    padding: 5px;
+    resize: none;
+    background-color: #010409;
+    color: lightgray;
+}
+
+.answer__form > h1{
+    color: lightgray;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
