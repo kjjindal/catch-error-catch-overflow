@@ -13,6 +13,7 @@ import { login, logout, selectuser } from '../features/userSilice';
 import { auth } from './firebase';
 import Pagenotfound from './Pagenotfound';
 import Answer from './Answer' ;
+import SearchBox from './SearchBox';
 
 
 function App() {
@@ -33,9 +34,6 @@ function App() {
           email:authUser.email,
           displayName:authUser.displayName
         }))
-        console.log(user?.photo);
-
-        
       }
       else{
         dispatch(logout())
@@ -53,6 +51,7 @@ function App() {
     <Router >
     
     <Header />
+    <SearchBox />
  
     <Switch>
     <Route  path="/language"  >

@@ -13,11 +13,14 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import SearchBox from './SearchBox';
 
 function Header(){
 
     const dispatch=useDispatch();
     const [languagearr,setlanguagearr]=useState([]);
+    const [searchquery,setsearchquery]=useState('');
+
 
     const user = useSelector(selectuser);
     
@@ -41,6 +44,11 @@ function Header(){
     const handlelogout=()=>{
 
       auth.signOut();
+
+    }
+
+    const handleSearch=(e)=>{
+        setsearchquery(e.target.value);
 
     }
 
@@ -100,7 +108,7 @@ function Header(){
         </div>
         <div className="header__search">
         <Search />
-        <input type="text" placeholder="search" />
+        <input type="text" placeholder="search" onChange={handleSearch} value={searchquery} />
         </div>
         <div className="header__button">
         {!user?
@@ -113,6 +121,7 @@ function Header(){
         }
         </div>
         </div>
+
         </div>
         </>
     )

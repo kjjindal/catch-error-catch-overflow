@@ -12,7 +12,7 @@ function ProblemBox({type,title,body,user,timestamp,id}){
     const dispatch=useDispatch();
 
     const history=useHistory();
-
+    
 
 
     const handleAnswer=()=>{
@@ -30,24 +30,12 @@ function ProblemBox({type,title,body,user,timestamp,id}){
         <>
         <div className="problembox">
 
-        <div className="problembox__left">
-        <div  className="problembox__votes">   
-        <p>  0  </p>
-        <p>  votes  </p>
-         
-         </div>
-         <div  className="problembox__answer">   
-        <p>  0  </p>
-        <p>  answer  </p>
-         
-         </div>
-         
-
-
-
-        </div>
+           
+        
         <div className="problembox__right">
-        <h2 onClick={handleAnswer}>  {title}  </h2>
+
+        <h2 onClick={handleAnswer} >{title}</h2>
+        
         <p>  {body.slice(0,184)} 
         {body.length>=184?'...':null}
           </p>
@@ -57,8 +45,6 @@ function ProblemBox({type,title,body,user,timestamp,id}){
                  new Date(timestamp?.toDate()).toLocaleString()
             )} </small>
         <p>   Ask by <Avatar src={user.photo} alt={user.displayName} />  </p>
-
-
         </div>
 
         </div>

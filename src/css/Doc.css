@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     z-index: 10;
-
+    min-height: 100vh;
 }
 .doc > .doc__body{
     border-left: 1px solid grey;
@@ -15,7 +15,6 @@
 
 .doc__body > .doc__header{
        
-    /* border-bottom: 1px solid white; */
     padding: 15px;
 
 }
@@ -49,4 +48,9 @@
 
 .doc__header2 > button{
     background-color: #E1ECF4 !important;
+}
+.doc__scroll{
+    display: flex;
+    justify-content: center;
+    margin:20px 0px 20px 0px;
 }

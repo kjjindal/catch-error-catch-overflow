@@ -1,33 +1,46 @@
 .ask{
     background-color: #010409;
     display: flex;
-    height: 100vh;
-    justify-content: center;
+    /* height: 100vh; */
+    min-height: 100vh;
 
+    justify-content: center;
+}
+.ask__container > .MuiAlert-root{
+    /* width:80%; */
+    margin-top: 10px;
+}
+.ask__container > h1{
+    color: lightgray;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 10px;
 }
 
-form{
+.ask__container>form{
     background-color: #161B22;
     border-radius: 5px;
     width:70%;
     padding: 10px;
-    height: 80%;
+    height: 90%;
+    margin-bottom: 10px;
 }
 
-form > .form__title{
+
+.ask__container>form > .form__title{
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-bottom: 20px;
 
 }
-form > .form__type{
+.ask__container>form > .form__type{
     width: 100%;
     margin-bottom: 20px;
 
 }
 
-form > .form__body{
+.ask__container>form > .form__body{
     margin-bottom: 20px;
 
     display: flex;
@@ -36,7 +49,7 @@ form > .form__body{
 
 }
 
-.form__title > p{
+.ask__container>form >.form__title > p{
 
     color: white;
     margin-bottom: 5px;
@@ -44,7 +57,7 @@ form > .form__body{
 
 
 }
-.form__title > input {
+.ask__container>form >.form__title > input {
     padding: 5px;
     width: 95%;
     outline-width: 0;
@@ -55,20 +68,18 @@ form > .form__body{
     color: lightgray;
 
 }
-.form__title > small{
+.ask__container>form >.form__title > small{
     color:rgb(223, 24, 24);
 }
 
-.form__type > p{
+.ask__container>form >.form__type > p{
 
     color: white;
     margin-bottom: 5px;
     text-transform: capitalize;
 
-
-
 }
-.form__type > input {
+.ask__container>form >.form__type > input {
     padding: 5px;
     width: 95%;
     outline-width: 0;
@@ -80,7 +91,7 @@ form > .form__body{
 }
 
 
-.form__body > p{
+.ask__container>form >.form__body > p{
     color: white;
     text-transform: capitalize;
     margin-bottom: 5px;
@@ -88,7 +99,7 @@ form > .form__body{
 
 }
 
-.form__body > textarea{
+.ask__container>form >.form__body > textarea{
     width: 95%;
     height: 300px;
     border-radius: 5px;
@@ -101,10 +112,10 @@ form > .form__body{
 
 }
 
-.form__body > small{
+.ask__container>form >.form__body > small{
     color: rgb(223, 24, 24);
 }
 
-form > button{
+.ask__container>form > button{
     background-color: lightgreen !important;
 }

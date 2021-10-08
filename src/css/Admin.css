@@ -1,6 +1,7 @@
 .admin{
     background-color: rgb(13, 17, 23);
-    height: 100vh;
+    min-height: 100vh;
+
 }
 
 .admin > .MuiAlert-root{
