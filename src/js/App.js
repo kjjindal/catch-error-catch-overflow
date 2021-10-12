@@ -14,6 +14,9 @@ import { auth } from './firebase';
 import Pagenotfound from './Pagenotfound';
 import Answer from './Answer' ;
 import SearchBox from './SearchBox';
+import {selectshowsearchbox, setnotshowsearchbox } from '../features/searchSlice';
+import { selectanswer } from '../features/answerSlice';
+import PageNotFound from './Pagenotfound';
 
 
 function App() {
@@ -22,6 +25,8 @@ function App() {
   const dispatch=useDispatch();
 
   const user=useSelector(selectuser);
+  const showsearchbox=useSelector(selectshowsearchbox);
+  const answer=useSelector(selectanswer);
 
 
   useEffect(()=>{
@@ -46,12 +51,14 @@ function App() {
 
 
 
+
   return (
-    <div className="app">
+    <div className="app"  >
     <Router >
     
-    <Header />
-    <SearchBox />
+    <Header  />
+    {showsearchbox?<SearchBox />:null}
+  
  
     <Switch>
     <Route  path="/language"  >
@@ -73,7 +80,8 @@ function App() {
     {user?<Ask />:<Pagenotfound  />}
     </Route>
     <Route  path="/answer"    >
-    <Answer  />
+   
+      {answer? <Answer  />:<PageNotFound  />}
     </Route>
      <Route  path="/"    >
     <Home  />

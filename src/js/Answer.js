@@ -63,13 +63,13 @@ function Answer() {
             })))
         })
 
-    }, [])
+    }, [secques?.id])
 
 
     useEffect(() => {
         db.collection('questions').doc(secques?.id).get()
             .then(snapshot => setquestion(snapshot.data()))
-    }, [])
+    }, [secques?.id])
 
     return (
         <>

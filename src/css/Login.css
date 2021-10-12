@@ -11,6 +11,9 @@
     background-color: lightgray;
     border-radius: 5px !important;
 }
+.login > button:hover{
+    box-shadow: 0px 0px 4px 1px rgb(233 113 11);
+}
 
 .login > button  img {
     margin-right: 5px;
