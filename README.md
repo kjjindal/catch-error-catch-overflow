@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -37,7 +42,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## how we use as own project 
+first we have to download this project as a zip file extract zip file and put in a separate folder .
+after this type npm init in terminal and install all necessary module using npm install <module name> . after this type npm start for start the react js and enjoy :) :) 
+
+
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
