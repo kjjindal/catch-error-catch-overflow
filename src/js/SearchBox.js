@@ -23,14 +23,14 @@ function SearchBox(){
           ));
         })
 
-      }, [])
+      }, [questions])
 
       useEffect(()=>{
         setnewquestions(questions.filter((value)=>{
             return value.data.title.includes(query.query)
         }))
 
-      },[query?.query])
+      },[query?.query,questions])
 
       
     

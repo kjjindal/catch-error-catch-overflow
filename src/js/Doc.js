@@ -12,6 +12,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { useSelector } from 'react-redux';
 import InfiniteScroll from "react-infinite-scroll-component";
+import Filter from './Filter';
+import { selectfilter } from '../features/filterSlice';
 
 
 function Doc() {
@@ -30,15 +32,29 @@ function Doc() {
   };
   const [questions, setquestions] = useState([]);
   const [limitquestions, setlimitquestions] = useState([]);
+  const  filterquery=useSelector(selectfilter);
+  const [filtershow,setfiltershow]=useState(false);
 
+  const handlefiltershow=()=>{
+
+    
+
+    if(!filtershow){
+      setfiltershow(true);
+     
+    }
+    else{
+      setfiltershow(false);
+
+    }
+  }
 
 
 
 
 
   const fetchMoreData = () => {
-    // a fake async api call like which sends
-    // 20 more records in 1.5 secs
+  
     setTimeout(() => {
 
 
@@ -54,21 +70,57 @@ function Doc() {
   }
 
   useEffect(() => {
-    db.collection('questions').orderBy('timestamp', 'desc').onSnapshot((snapshot) => {
-      setquestions(snapshot.docs.map((doc) =>
-      ({
-        id: doc.id,
-        data: doc.data()
-      })
 
-      ));
-    })
-  }, [])
+    if(filterquery){
+
+      if(filterquery.timequery==="desc"){
+        db.collection('questions').where("type","==",filterquery?.filtertype).orderBy('timestamp', 'desc').onSnapshot((snapshot) => {
+          setquestions(snapshot.docs.map((doc) =>
+          ({
+            id: doc.id,
+            data: doc.data()
+          })
+    
+          ));
+        })
+      }
+      else{
+        
+        db.collection('questions').where("type","==",filterquery?.filtertype).orderBy('timestamp', 'asc').onSnapshot((snapshot) => {
+          setquestions(snapshot.docs.map((doc) =>
+          ({
+            id: doc.id,
+            data: doc.data()
+          })
+    
+          ));
+        })
+      }
+     
+    }
+    else{
+      db.collection('questions').orderBy('timestamp', 'desc').onSnapshot((snapshot) => {
+        setquestions(snapshot.docs.map((doc) =>
+        ({
+          id: doc.id,
+          data: doc.data()
+        })
+  
+        ));
+      })
+    }
+
+  
+  }, [filterquery])
+  
+  
 
   useEffect(() => {
     setlimitquestions(questions.slice(0, 3));
 
   }, [questions])
+
+
 
 
 
@@ -109,10 +161,14 @@ function Doc() {
             </div>
             <div className="doc__header2">
               <h2> {limitquestions.length}  </h2>
-              <Button> Filter  </Button>
+              <Button onClick={handlefiltershow} > Filter  </Button>
 
             </div>
           </div>
+  
+          {filtershow?<Filter />:null}
+          
+
 
           <div className="doc__body2">
             <InfiniteScroll
@@ -123,7 +179,7 @@ function Doc() {
             }
             >
               {limitquestions.map(({ data: { type, title, body, user, timestamp }, id }) => (
-                <ProblemBox id={id} type={type} title={title} body={body} user={user} timestamp={timestamp} />
+                <ProblemBox key={id} id={id} type={type} title={title} body={body} user={user} timestamp={timestamp} />
               ))}
             </InfiniteScroll>
 

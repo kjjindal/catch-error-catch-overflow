@@ -14,7 +14,7 @@ import { auth } from './firebase';
 import Pagenotfound from './Pagenotfound';
 import Answer from './Answer' ;
 import SearchBox from './SearchBox';
-import {selectshowsearchbox, setnotshowsearchbox } from '../features/searchSlice';
+import {selectshowsearchbox} from '../features/searchSlice';
 import { selectanswer } from '../features/answerSlice';
 import PageNotFound from './Pagenotfound';
 

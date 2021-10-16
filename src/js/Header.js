@@ -102,7 +102,7 @@ function Header() {
             {user?.email === "kalpitjindal1999@gmail.com" ?
               <p> <Link to="/admin">   Admin </Link> </p>
               :
-              <p> <a variant="outlined" color="primary" onClick={handleClickOpen}> Admin    </a>        </p>
+              <p> <a variant="outlined" href="/" color="primary" onClick={handleClickOpen}> Admin    </a>        </p>
 
             }
 

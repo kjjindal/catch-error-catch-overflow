@@ -26,7 +26,7 @@ function Answer() {
     const secques = useSelector(selectanswer);
 
     const giveAnswer = () => {
-        var regex = /https\:\/\/www\.youtube\.com\/embed\/*/;
+        var regex = /https:\/\/www\.youtube\.com\/embed\/*/;
         if (regex.test(videolink)) {
             db.collection('questions').doc(secques?.id).collection('answers').add({
                 submitedBy: user,
@@ -38,7 +38,7 @@ function Answer() {
             })
             setanswer('');
         }
-        else if(videolink==''){
+        else if(videolink===''){
             db.collection('questions').doc(secques?.id).collection('answers').add({
                 submitedBy: user,
                 solution: answer,

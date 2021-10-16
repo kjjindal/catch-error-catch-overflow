@@ -1,5 +1,4 @@
 import { Avatar } from '@material-ui/core';
-import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';

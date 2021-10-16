@@ -1,18 +1,17 @@
 import { Avatar } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import '../css/AnswerBox.css';
 import { selectanswer } from '../features/answerSlice';
 import db from './firebase';
 import * as timeago from 'timeago.js';
-import { Check, DoneOutline, Favorite, WhereToVote } from '@material-ui/icons';
+import { Check, Favorite } from '@material-ui/icons';
 
 
 
 function AnswerBox({id2,submitedBy,likes,votes,solution,timestamp,videolink}) {
 
     const secques = useSelector(selectanswer);
-    const [question,setquestion]=useState([]);
 
 
     const handleLike = () => {
@@ -59,7 +58,7 @@ function AnswerBox({id2,submitedBy,likes,votes,solution,timestamp,videolink}) {
                         <small> {timeago.format(
                             new Date(timestamp?.toDate()).toLocaleString()
                         )} </small>
-                        <p>   Ask by <Avatar src={submitedBy.photo} alt={submitedBy.displayName} />  </p>
+                        <p> Answer by<Avatar src={submitedBy.photo} alt={submitedBy.displayName} />  </p>
 
 
                     </div>
