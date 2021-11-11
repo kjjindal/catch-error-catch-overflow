@@ -1,0 +1,29 @@
+.filter{
+
+    padding:20px;
+    background-color: rgb(241,242,243);
+}
+.filter__top{
+    display: flex;
+    justify-content: space-between;
+}
+.filter__left {
+ flex:0.35;
+
+}
+.filter__left > p{
+    margin:5px 0px 5px 0px ;
+}
+.filter__left > input {
+    padding:10px;
+    border-radius: 5px;
+    width: 100%;
+    outline-width: 0px;
+    border: 1px solid grey;
+
+}
+.filter__bottom > button{
+  width: 100px;
+    margin-top: 10px;
+    background-color: #0074CC !important;
+}

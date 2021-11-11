@@ -1,0 +1,159 @@
+.header{
+   box-shadow: 1px 1px 3px 4px rgb(0, 2, 3);
+   background-color: #FAFAFB;
+   position: sticky;
+   top: 0;
+   background-color: rgb(22,27,34);
+   z-index: 1000;
+
+}
+.header__center{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.header__center > .MuiSvgIcon-root{
+    padding: 0px 5px;
+    height: 45px !important;
+    color: white !important;
+
+}
+.header__center > .MuiSvgIcon-root:hover{
+    /* background-color: #E4E6E8 !important; */
+    background-color: orange !important;
+    color: black !important;
+}
+
+.header__center > img{
+    width: 50px;
+    height:45px;
+    object-fit: cover;
+}
+.header__center > .MuiSvgIcon-root{
+    /* display: inline; */
+   
+}
+
+.header__center > h3{
+    font-weight: 200;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding:0px 5px;
+    color: white;
+}
+
+.header__center > h3:hover{
+    /* background-color: #E4E6E8 !important; */
+    background-color: orange !important;
+}
+.header__center > h3:hover > a {
+   color: black;
+}
+.header__center > h3:hover > a > span {
+    color: black;
+ }
+.header__center>h3>a{
+    color: white;
+    text-decoration: none;
+}
+ 
+
+
+.header__center > h3 > a > span{
+    color: white;
+    font-weight: 500;   
+}
+
+
+.header__click{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 0.3;
+}
+
+
+.header__click >p{
+    margin: 0px 3px 0px 3px;
+    padding: 6px 16px;
+ text-align: center;
+ font-size: 12px;
+ cursor: pointer;
+ color: white;
+
+}
+.header__click > p > a {
+    color: white;
+    text-decoration: none !important;
+}
+
+
+
+
+
+.header__click >p:hover {
+    /* background-color:#E4E6E8; */
+    background-color: orange;
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+.header__click >p:hover > a {
+   color: black;
+}
+
+
+.header__search{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #BBC0C4;
+    border-radius: 50px;
+    background-color: rgb(1, 4, 9);
+
+    padding: 5px;
+    flex: 0.6;
+    height: 25px;
+    margin-left:5px;
+    margin-right: 5px;
+
+}
+.header__search >input {
+    border: none;
+    outline-width: 0;
+    overflow: hidden;
+    flex: 1;
+    background-color: transparent;
+    color: white;
+}
+
+
+.header__search > .MuiSvgIcon-root{
+    color:#BBC0C4 !important;
+    cursor: pointer !important;
+}
+
+
+.header__button >.header__login  a{
+    text-decoration: none !important;
+    color:#A4C0D5 !important;
+
+}
+.header__button >.header__signup{
+}
+
+.header__button >.header__login{
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #E1ECF4 !important;
+}
+.header__button >.header__signup{
+    color:white !important;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #0095FF !important;
+
+}

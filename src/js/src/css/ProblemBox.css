@@ -1,0 +1,83 @@
+.problembox{
+    border-top: 1px solid grey;
+    padding: 10px;
+    display: flex;
+    background-color: #161B22;
+    
+}
+.problembox__left{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.problembox__left > .problembox__votes{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.problembox__votes > p{
+    text-align: center;
+
+    color: white;
+
+}
+
+.problembox__left > .problembox__answer{
+    display: flex;
+    flex-direction: column;
+}
+
+.problembox__answer > p{
+    text-align: center;
+    color: white;
+
+}
+
+.problembox__right{
+    margin-left: 15px;
+
+}
+.problembox__right > h2{
+    color: lightblue;
+    margin-bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+
+}
+
+.problembox__right > p{
+color: white;
+text-align: justify;
+margin-bottom: 10px;
+
+
+}
+
+
+.problembox__right > .MuiChip-outlined{
+    border: 1px solid grey !important;
+    color: white  !important;
+
+}
+
+.problembox__askedby{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.problembox__askedby > p{
+    display: flex;
+    align-items: center;
+    color: lightgray;
+
+}
+.problembox__askedby > p > .MuiAvatar-circular{
+    margin-left: 10px !important;
+}
+.problembox__askedby > small{
+    color: grey;
+}

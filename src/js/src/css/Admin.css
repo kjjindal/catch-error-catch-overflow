@@ -1,0 +1,150 @@
+.admin{
+    background-color: rgb(13, 17, 23);
+    min-height: 100vh;
+
+}
+
+.admin > .MuiAlert-root{
+    width:80%;
+    margin: auto;
+}
+.admin > .MuiPaper-root{
+    /* margin-top: 10px; */
+    position: sticky;
+    top: 50px;
+    background-color:rgba(0,0,0,0.9) !important ;
+    box-shadow:  1px 1px 5px 1px #3f51b5;
+    z-index: 100;
+}
+.admin > .MuiPaper-root button{
+     color: gray !important;
+}
+
+
+.admin > .admin__addnew > form {
+    margin: auto;
+    width:40%;
+}
+.admin > .admin__addnew  > form > .admin__logo{
+    display: flex;
+    align-items: center;
+}
+
+.admin > .admin__addnew  > form img {
+    width: 100px;
+    object-fit: contain;
+}
+.admin h2{
+    color: white;
+}
+
+.admin > .admin__addnew  input{
+    padding: 10px;
+    width:500px;
+    outline-width: 0;
+    margin: 10px;
+    background-color: rgb(1,4,9);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: white;
+
+}
+.admin > .admin__addnew  input:hover{
+   box-shadow:  1px 1px 5px 1px orange;
+}
+
+.admin > .admin__addnew  p{
+    margin: 10px 10px 0px 10px ;
+    color: white;
+    text-transform: capitalize;
+}
+.admin > .admin__addnew  textarea{
+    margin: 10px;
+    background-color: rgb(1, 4, 9);
+    color: white;
+    border-radius: 10px;
+}
+.admin > .admin__addnew  textarea:hover{
+   box-shadow:  1px 1px 5px 1px orange;
+
+}
+
+.admin > .admin__addnew >form button{
+    background-color: rgb(35,134,54) !important;
+    margin: 10px !important;
+}
+
+
+
+/* delete form css */
+
+
+.admin > .admin__delete > form {
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.admin > .admin__delete > form > .admin__deleteform > .MuiOutlinedInput-root{
+    width:350px;
+    border: 1px solid grey;
+}
+
+.admin > .admin__delete > form > .admin__deleteform > .MuiOutlinedInput-root > div {
+    color: white !important;
+}
+.admin > .admin__delete > form > .admin__deleteform > .MuiOutlinedInput-root  svg {
+    color: white !important;
+}
+
+.admin > .admin__delete > form > button {
+    margin-top: 10px;
+    background-color:rgb(182,35,36) !important;
+}
+
+
+
+/* update form  */
+
+.admin > .admin__update > form {
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.admin > .admin__update > form > .admin__updateform > .MuiOutlinedInput-root{
+    width:350px;
+    border: 1px solid grey;
+    margin: 10px;
+
+}
+.admin > .admin__update > form > .admin__updateform > .MuiOutlinedInput-root > div {
+    color: white !important;
+}
+.admin > .admin__update > form > .admin__updateform > .MuiOutlinedInput-root  svg {
+    color: white !important;
+}
+.admin > .admin__update > form >  .admin__updatelink > p{
+    margin: 10px 10px 0px 10px ;
+    text-transform: capitalize;
+
+    color: white;
+}
+.admin > .admin__update > form >  .admin__updatelink > input {
+    padding: 10px;
+    width:500px;
+    outline-width: 0;
+    margin: 10px;
+    background-color: rgb(1,4,9);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: white;
+}
+
+.admin > .admin__update > form > button{
+    color: black !important;
+    margin: 10px;
+    background-color: rgb(254,201,5) !important;
+}

@@ -1,0 +1,104 @@
+.answerbox{
+    border-top: 1px solid grey;
+    padding: 10px;
+    display: flex;
+    background-color: #161B22;
+}
+
+.answerbox__left{
+    display: flex;
+    flex-direction: column;
+}
+
+.answerbox__left > .answerbox__votes{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.answerbox__votes > p{
+    text-align: center;
+    color: white;
+}
+
+
+.answerbox__left > .answerbox__answer{
+    display: flex;
+    flex-direction: column;
+}
+
+.answerbox__answer > p{
+    text-align: center;
+    color: white;
+}
+
+.answerbox__right{
+    margin-left: 15px;
+    flex: 1;
+
+}
+.answerbox__right > h2{
+    color: lightblue;
+    margin-bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+
+}
+
+.answerbox__right > p{
+color: white;
+text-align: justify;
+margin-bottom: 10px;
+
+
+}
+
+
+.answerbox__right > .MuiChip-outlined{
+    border: 1px solid grey !important;
+    color: white  !important;
+
+}
+
+.answerbox__askedby{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.answerbox__askedby > p{
+    display: flex;
+    align-items: center;
+    color: lightgray;
+
+}
+.answerbox__askedby > p > .MuiAvatar-circular{
+    margin-left: 10px !important;
+}
+.answerbox__askedby > small{
+    color: grey;
+}
+
+
+
+.answerbox__pbutton{
+    cursor: pointer;
+}
+.answerbox__pbutton2{
+    cursor: pointer;
+}
+
+.answerbox__pbutton>.MuiSvgIcon-root{
+    color: green !important;
+    font-size: 30px;
+
+}
+.answerbox__pbutton2>.MuiSvgIcon-root{
+    color: red !important;
+    font-size: 30px;
+
+}
+
+.answerbox__right2{
+    margin-left: 10px;
+}

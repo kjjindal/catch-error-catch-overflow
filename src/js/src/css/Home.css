@@ -1,0 +1,14 @@
+.home{
+    height: 100vh;
+    background-color: #0D1117;
+    background: url('https://i.gifer.com/g1IZ.gif');
+    background-position:center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.home > p{
+    font-size:100px;
+    color: white;
+}
